@@ -1,0 +1,37 @@
+# Network port
+port 1234
+
+# Game resolution and mode: window (0) or fullscreen (1)
+res_x 640
+res_y 480
+fullscreen 0
+
+# Radius of tower arrangement on screen
+bigcircle_radius 180
+# Offset of tower arrangement on screen
+bigcircle_ycorrection 20
+# Size of last move indicator
+lastmove_radius 10
+# Size of single chip
+smallcircle_radius 20
+# Offset of single chip for one unit of height
+circleup_distance 5
+
+# Color of last move indicator and arrow
+lastmove_color_r 255
+lastmove_color_g 190
+lastmove_color_b 30
+
+# Color of error message
+error_color_r 255
+error_color_g 123
+error_color_b 23
+
+# Colors of arrows indicating move options
+movearrow_left_r 120
+movearrow_left_g 80
+movearrow_left_b 80
+
+movearrow_right_r 80
+movearrow_right_g 120
+movearrow_right_b 80
