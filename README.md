@@ -46,7 +46,7 @@ For example, if you control a tower of 3 chips, you may take your top chip and p
 
 If the moved chip was the last one in its tower (that is, it had a height of 1), then its neighboring towers now become neighbors. The gap in the circle is eliminated and there is now one fewer tower on the board.
 
-Once a tower reaches the maximum height of 5, it becomes locked. Chips cannot be moved from, to or across locked towers. Locked towers can drastically limit the move options for the players.
+The maximum height for a tower is 5. Chips cannot be moved to or across towers of maximum height. Maximum-height towers can drastically limit the move options for the players.
 
 ## Settings
 
