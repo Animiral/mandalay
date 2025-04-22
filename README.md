@@ -11,6 +11,8 @@ Mandalay works on Windows and Linux. It requires the [Allegro 4 library](https:/
 
 Either use the included Makefile to build it -- just invoke `make` -- or, on Windows, run `Build.bat`.
 
+If you have trouble building Mandalay -- perhaps due to Allegro 4 being outdated -- you can run it as a Docker container. See *Docker Image* below.
+
 ## How to Run
 
 Both players need to agree who will run the *host* and who will run the *client*.
@@ -51,3 +53,14 @@ The maximum height for a tower is 5. Chips cannot be moved to or across towers o
 ## Settings
 
 The program reads settings from the file `settings.txt` in a space-separated `<key> <value>` format. Lines that start with `#` are comments. The default `settings.txt` contains comments that describe all the available properties.
+
+## Docker Image
+
+Mandalay is available as a Docker image. This can be convenient to resolve problems with compiling the game.
+If you want to run this image, you first need to install [Docker](https://www.docker.com/).
+
+The command to run it is encapsulated in `RunContainer.sh`. As with the game itself, the server player should just run the script without arguments. The client must pass the server's hostname or address as commandline argument.
+
+The script will automatically pull the image from Docker Hub. You can also build it yourself based on the `Dockerfile` included with this repository. Just run `docker build -t mandalay .`.
+
+Problems may emerge because the image needs a lot of extra permissions to run: free access to the host's IPC devices, network and X server socket. It will not work on systems where X11 is not available.
